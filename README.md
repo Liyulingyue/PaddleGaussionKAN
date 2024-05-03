@@ -7,4 +7,19 @@ In this project, a Gasussion Distribution is used to replace the original B-bran
 ## Notes
 The demo use PaddlePaddle(CPU), if you want to use GPU, you need uninstall `paddlepaddle` and install `paddlepaddle-gpu`.
 
+## Usage
+install paddlepaddle, if you have gpu, please install `paddlepaddle-gpu`.
+```bash
+pip install paddlepaddle
+```
 
+run the demo.
+```python
+from KANLayer import KANLayer
+import paddle
+
+x = paddle.randn([1, 32])
+layer = KANLayer(32, 64, 8)
+y = layer(x)
+print(y.shape)
+```
