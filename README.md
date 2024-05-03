@@ -19,6 +19,7 @@ from KANLayer import KANLayer
 import paddle
 
 x = paddle.randn([1, 32])
+# 32 input channels, 64 output channels, 8 normal distribution to fit a polynomial
 layer = KANLayer(32, 64, 8)
 y = layer(x)
 print(y.shape)
